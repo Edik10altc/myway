@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import TA from './TA pic.jpg'
 import TA1 from './TA pic3.jpg'
-import './MainBoard.css';
+import s from './MainBoard.css';
 
 
 const customStyles = {
@@ -43,27 +43,25 @@ class MainBoard extends Component {
 
     render() {
         return (
-            <div className="MainBoard">
-                <p className="App-intro">
-
-                </p>
-                <div className="rectangle-2"
+            <div className={s.MainBoard}>
+              First Draft - place holders
+                <div className={s["rectangle-2"]}
                      onClick={this.openModal}>
                     <Modal
                         isOpen={this.state.modalIsOpen}
                         onAfterOpen={this.afterOpenModal}
                         onRequestClose={this.closeModal}
-                        className="rectangle-14"
+                        className={s["rectangle-14"]}
                         contentLabel="Example Modal"
                     >
-                        <div className="rectangle-2 small"></div>
-                        <div className="rectangle-2"></div>
+                        <div className={s["rectangle-2"]["small"] }></div>
+                        <div className={s["rectangle-2"]}></div>
 
                         <button onClick={this.closeModal}>close</button>
 
 
                     </Modal>
-                    <img src={TA1} className="ta-image"/>
+                    <img src={TA1} className={s["ta-image"]}/>
                     <div>7 Functions</div>
 
                 </div>

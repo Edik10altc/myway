@@ -3,10 +3,10 @@ import RightBar from './RightBar';
 import LeftBar from './LeftBar';
 import MainBoard from './MainBoard';
 import logo from './logo.svg';
-import './App.css';
+import s from './App.css';
 
 
-class App extends Component {
+class HomePage extends Component {
   constructor(props) {
     super(props);
   }
@@ -14,11 +14,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
+      <div className={s.App}>
+        <div className={s.AppHeader}>
+          <img src={logo} className={s.AppLogo} alt="logo" />
+          <h5 className={s.AppTitle}>Toolbar place holder</h5>
+        </div>
         <LeftBar/>
         <MainBoard/>
         <RightBar/>

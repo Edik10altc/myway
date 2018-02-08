@@ -6,13 +6,12 @@ import Calendar from 'rc-calendar';
 import DatePicker from 'rc-calendar/lib/Picker';
 import zhCN from 'rc-calendar/lib/locale/zh_CN';
 import enUS from 'rc-calendar/lib/locale/en_US';
-//import 'rc-time-picker/assets/index.css';
-//import TimePickerPanel from 'rc-time-picker/lib/Panel';
+
 
 import moment from 'moment';
 import 'moment/locale/zh-cn';
 import 'moment/locale/en-gb';
-import './LeftBar.css';
+import s from './LeftBar.css';
 
 const format = 'YYYY-MM-DD HH:mm:ss';
 //const cn = location.search.indexOf('cn') !== -1;
@@ -37,7 +36,7 @@ class LeftBar extends Component {
 
   render() {
     return (
-      <div className="LeftBar">
+      <div className={s.LeftBar}>
           <Calendar
               locale={enUS}
               showDateInput={true}
