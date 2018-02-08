@@ -1,0 +1,6 @@
+.LeftBar {
+  background-color: white;
+  min-width: 15%;
+  min-height: 500px;
+  border-right: #222222 solid thin;
+}

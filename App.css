@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  flex: 0 1 100%;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.ta-image{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+}
+
+
+.rectangle-2 {
+  min-height: 45px;
+  width: 33.26%;
+  padding-top: 20px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rectangle-2.small {
+  width: 13.96%;
+}
+
+.rectangle-14 {
+  height: 53.52%;
+  width: 100%;
+  background-color: rgba(74,74,74,0.7);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.hi-yael-why-won-t-y {
+  height: 87px;
+  width: 253px;
+  color: #9B9B9B;
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+}
+
+.screen-shot-2018-01-22-at-10-5 {
+  height: 3.75%;
+  width: 3.84%;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
