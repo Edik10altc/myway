@@ -1,6 +1,5 @@
 .MainBoard {
-  min-width: 40%;
-  color: red;
+  min-width: 35%;
 }
 
 .ta-image{
@@ -8,6 +7,21 @@
   width: 50px;
   height: 50px;
   margin-left: auto;
+}
+
+.todo-step {
+ height: 25px;
+  border: 1.2px solid #EBEDF3;
+  background-color: #FFFFFF;
+  display: flex;
+}
+
+.todo-step.checkbox {
+  height: 28.8px;
+  width: 28.8px;
+  border: 1.2px solid #EBEDF3;
+  border-radius: 3.6px;
+  background-color: #FFFFFF;
 }
 
 
