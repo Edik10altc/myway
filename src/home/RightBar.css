@@ -1,5 +1,9 @@
 .RightBar {
-  background-color: rebeccapurple;
   min-width: 30%;
-  min-height: 300px;
+  min-height: 500px;
+}
+
+.socialImg {
+  width: 200px;
+
 }

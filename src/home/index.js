@@ -3,6 +3,7 @@ import RightBar from './RightBar';
 import LeftBar from './LeftBar';
 import MainBoard from './MainBoard';
 import logo from './logo.svg';
+import header from './Header.png'
 import s from './App.css';
 
 
@@ -16,8 +17,7 @@ class HomePage extends Component {
     return (
       <div className={s.App}>
         <div className={s.AppHeader}>
-          <img src={logo} className={s.AppLogo} alt="logo" />
-          <h5 className={s.AppTitle}>Toolbar place holder</h5>
+         <img src={header} className={s.App}></img>
         </div>
         <LeftBar/>
         <MainBoard/>

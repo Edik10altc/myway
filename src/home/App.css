@@ -7,17 +7,12 @@
   font-size: xx-small;
 }
 
-.AppLogo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 50px;
+.AppHeader {
+  flex: 0 1 100%;
 }
 
-.AppHeader {
-  background-color: #222;
-  height: 80px;
-  padding: 20px;
-  color: white;
-  flex: 0 1 100%;
+.AppHeader img {
+  height: 100px;
 }
 
 .AppTitle {

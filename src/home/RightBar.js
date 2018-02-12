@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import YouTube from 'react-youtube'
 import s from './RightBar.css';
+import socialImg from './Social.png'
 
 
 class RightBar extends Component {
@@ -15,12 +16,12 @@ class RightBar extends Component {
       };
     return (
       <div className={s.RightBar}>
-          <YouTube
-          videoId="nwQC-v4ef5o"
-          opts={opts}
-          onReady={this._onReady}
-          />
-
+          {/*<YouTube*/}
+          {/*videoId="nwQC-v4ef5o"*/}
+          {/*opts={opts}*/}
+          {/*onReady={this._onReady}*/}
+          {/*/>*/}
+        <img src={socialImg} className={s.socialImg}/>
       </div>
     )}
 
