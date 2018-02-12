@@ -1,9 +1,10 @@
 .RightBar {
   min-width: 30%;
   min-height: 500px;
+  margin-left: auto;
 }
 
 .socialImg {
-  width: 200px;
+  width: 77%;
 
 }
