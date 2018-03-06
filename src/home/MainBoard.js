@@ -16,6 +16,8 @@ const customStyles = {
     }
 };
 
+Modal.setAppElement('#container');
+
 const TodoForm = ({addTodo}) => {
   // Input tracker
   let input;
@@ -27,10 +29,24 @@ const TodoForm = ({addTodo}) => {
   );
 };
 
-const Todo = ({todo, remove}) => {
+const Todo = ({todo, openModal, closeModal, modalIsOpen}) => {
   // Each Todo
   return (
-    <div className={s["todo-step"]}><input type="checkbox"/>{todo.text} <TAImg todo={todo}/></div>
+    <div  className={s["todo-step"]} >
+      <input onClick={() => {openModal()}} type="checkbox"/>{todo.text}1 <TAImg todo={todo}/>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={this.afterOpenModal}
+        onRequestClose={this.closeModal}
+        className={s["rectangle-14"]}
+        contentLabel="Example Modal"
+        >
+        {/*<div className={s["rectangle-2"]["small"] }></div>*/}
+        {/*<div className={s["rectangle-2"]}></div>*/}
+
+        <button onClick={closeModal}>close</button>
+      </Modal>
+    </div>
   );
 }
 
@@ -42,11 +58,10 @@ const TAImg = ({todo}) => {
   return (<div></div>);
 }
 
-const TodoList = ({todos, remove}) => {
+const TodoList = ({todos, openModal, closeModal, modalIsOpen}) => {
   // Map through the todos
-
   const todoNode = todos.map((todo) => {
-    return (<Todo todo={todo} key={todo.id} remove={remove}/>)
+    return (<Todo todo={todo} key={todo.id} openModal={openModal} closeModal={closeModal} modalIsOpen={modalIsOpen}/>)
   });
   return (<div className="list-group" style={{marginTop:'30px'}}>{todoNode}</div>);
 }
@@ -74,13 +89,15 @@ class MainBoard extends Component {
             {"id":"00005","text":"Welcome"}
             ]
         };
-        this.openModal = this.openModal.bind(this);
         this.afterOpenModal = this.afterOpenModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
     }
 
     openModal() {
+      debugger
+      console.log('openModal-b', this.state.modalIsOpen)
         this.setState({modalIsOpen: true});
+      console.log('openModal', this.state.modalIsOpen)
+
     }
 
     afterOpenModal() {
@@ -89,7 +106,10 @@ class MainBoard extends Component {
     }
 
     closeModal() {
+        console.log('closeModal')
+
         this.setState({modalIsOpen: false});
+      console.log('closeModal', this.state.modalIsOpen)
     }
 
   addTodo(val){
@@ -99,6 +119,15 @@ class MainBoard extends Component {
 
         this.state.data.push(todo);
         this.setState({data: this.state.data});
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+      console.log('shouldComponentUpdate', nextProps, nextState)
+      if(this.state.modalIsOpen !== nextState.modalIsOpen){
+        return true
+      }
+      return true
+
   }
 
 
@@ -112,6 +141,9 @@ class MainBoard extends Component {
                 <TodoForm addTodo={this.addTodo.bind(this)}/>
                 <TodoList
                   todos={this.state.data}
+                  openModal={this.openModal.bind(this)}
+                  closeModal={this.closeModal.bind(this)}
+                  modalIsOpen={this.state.modalIsOpen}
                 />
               </div>
               {/*<div className={s["rectangle-2"]}*/}
